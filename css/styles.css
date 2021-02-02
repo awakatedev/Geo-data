@@ -1,0 +1,18 @@
+/*-------------------------------
+          GLOBAL
+---------------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --background-white_ligth: #fff;
+  --background-blue_dark: #020215;
+  --black: #000000;
+}
+header{
+
+}
+.title{
+  
+}
