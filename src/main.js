@@ -1,6 +1,7 @@
 const api = {
   key: "553df87b08ae6c796e00b5b44924fbf5",
-  base: "https://api.openweathermap.org/data/2.5/",
+  base_weather: "https://api.openweathermap.org/data/2.5/",
+  base_map: "http://maps.openweathermap.org/maps/2.0/weather/",
 };
 
 const searchBox = document.querySelector(".search-box");
@@ -8,12 +9,13 @@ searchBox.addEventListener("keypress", setQuery);
 
 function setQuery(evt) {
   if (evt.keyCode == 13) {
-    getResults(searchBox.value);
+    getResults_wheather(searchBox.value);
+    getResults_map(searchBox.value);
   }
 }
 
-function getResults(query) {
-  fetch(`${api.base}weather?q=${query}&appid=${api.key}`)
+function getResults_weather(query) {
+  fetch(`${api.base_weather}weather?q=${query}&units=metric&APPID=${api.key}`)
     .then((weather) => {
       return weather.json();
     })
@@ -29,7 +31,7 @@ function displayResults(weather) {
   date.innerText = dateBuilder(now);
 
   let temp = document.querySelector(".current .temp");
-  hilow.innerHTML = `${Math.round(weather.main.temp)}<span>ºc</span>`;
+  temp.innerHTML = `${Math.round(weather.main.temp)}<span>ºc</span>`;
 
   let weather_el = document.querySelector(".current .weather");
   weather_el.innerText = weather.weather[0].main;
@@ -71,4 +73,12 @@ function dateBuilder(d) {
   let year = d.getFullYear();
 
   return `${day} ${date} ${month} ${year}`;
+}
+
+function getResults_map() {
+  fetch(`${api.base_map}/TA2/{z}/{x}/{y}/&appid={api.key}`)
+    .then((map) => {
+      return map.json();
+    })
+    .then(displayResults_map);
 }

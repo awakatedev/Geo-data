@@ -17,14 +17,17 @@
 /*----------------------------------
           BODY
  -----------------------------------*/
-body {
-  background-color: var(--green-smile);
-}
 header {
+  background-color: var(--green-smile);
   width: 100vw;
   height: 90px;
   display: flex;
   align-items: center;
+}
+main {
+  background-color: var(--green-smile);
+  height: 610px;
+  width: 100vw;
 }
 .title {
   margin-left: 3%;
@@ -39,6 +42,7 @@ header {
   height: 40px;
   top: 5%;
   right: 45%;
+  z-index: 50;
 }
 .search_container input {
   border-radius: 20px;
@@ -68,10 +72,50 @@ header {
 #icon-search:hover {
   color: gray;
 }
+.dark-mode_icon {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+/*-----------------------------------------
+          BLOCK CARDS
+ ------------------------------------------*/
+.block-cards {
+  display: block;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  width: 80%;
+  height: 450px;
+}
+.block-cards_container {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+/*-----------------------------------------
+            CARD INFO
+ ------------------------------------------*/
+.card-info {
+  height: 450px;
+  width: 60%;
+  position: relative;
+  background-color: var(--background-white_ligth);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
 /*----------------------------------------
-           CARDS-WEATHER
+           CARD WEATHER
  -----------------------------------------*/
 .card-Weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   border-radius: 10px;
   border: none;
@@ -79,7 +123,23 @@ header {
   height: 450px;
   max-width: 30%;
   min-width: 30%;
-  left: 60%;
-  top: 30px;
   padding: 10px;
+}
+.location .city {
+  font-size: 80%;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+}
+.location .date {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/*---------------------------------------
+                FOOTER
+ ----------------------------------------*/
+footer {
+  background-color: #030d1a;
+  height: 300px;
+  width: 100vw;
 }

@@ -7,6 +7,7 @@
 
     <!--LINKS-->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="vendor/normalize.css" />
     <link rel="stylesheet" href="vendor/fontawesome/fontawesome.css" />
   </head>
 
@@ -30,33 +31,39 @@
         </button>
       </div>
 
-      <div class="dark-mode-container"></div>
+      <div class="dark-mode-container">
+        <button class="dark-mode_icon"></button>
+      </div>
     </header>
 
     <main>
-      <!--CARD INFO-->
-      <section class="card-info">
-        <div></div>
-      </section>
-      <!--CARD WEATHER-->
-      <section class="card-Weather">
-        <div class="location">
-          <div class="city"></div>
+      <section class="block-cards">
+        <div class="block-cards_container">
+          <!--CARD INFO-->
+          <section class="card-info">
+            <div></div>
+          </section>
+          <!--CARD WEATHER-->
+          <section class="card-Weather">
+            <div class="location">
+              <div class="city"></div>
+              <div class="date"></div>
+            </div>
 
-          <div class="date"></div>
+            <div class="current">
+              <div class="temp"></div>
+              <div class="weather"></div>
+              <div class="hi-low"></div>
+            </div>
+            <!---->
+          </section>
         </div>
-
-        <div class="current">
-          <div class="temp"></div>
-          <div class="weather"></div>
-          <div class="hi-low"></div>
-        </div>
-        <!---->
       </section>
     </main>
 
     <footer></footer>
 
     <script src="src/main.js" charset="utf-8"></script>
+    <script src="src/styles.js"></script>
   </body>
 </html>
