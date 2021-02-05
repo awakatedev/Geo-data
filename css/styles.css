@@ -15,7 +15,7 @@
 }
 
 /*----------------------------------
-          BODY
+          HEADER
  -----------------------------------*/
 header {
   background-color: var(--green-smile);
@@ -29,9 +29,19 @@ main {
   height: 610px;
   width: 100vw;
 }
-.title {
+.title-container {
   margin-left: 3%;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-container h1 {
+  font-family: "Mulish", sans-serif;
+  padding-left: 5px;
+}
+.title-container i {
+  font-size: 30px;
 }
 .search_container {
   position: fixed;
@@ -41,7 +51,7 @@ main {
   max-width: 40%;
   height: 40px;
   top: 5%;
-  right: 45%;
+  right: 43%;
   z-index: 50;
 }
 .search_container input {
@@ -77,13 +87,54 @@ main {
   width: 30px;
   position: absolute;
   right: 5%;
-  top: 5%;
+  top: 6%;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+#moon {
+  font-size: 25px;
+  color: var(--background-blue_dark);
+}
+#sun {
+  font-size: 30px;
+  color: yellow;
+  display: none;
+}
+/*-----------------------------------------*/
+.search {
+  position: relative;
+  width: 70%;
+  left: 15%;
+  right: 15%;
+  top: 15%;
+  display: block;
+}
+.search-information {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.search-information img {
+  max-height: 390px;
+  max-width: 390px;
+  padding: 5px;
+  margin-top: 20px;
+}
+.search-information p {
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 180%;
+  padding: 10px;
+  background-color: var(--background-white_ligth);
+  border-radius: 10px;
+  height: 150px;
 }
 /*-----------------------------------------
           BLOCK CARDS
  ------------------------------------------*/
 .block-cards {
-  display: block;
+  display: none;
   position: absolute;
   right: 10%;
   top: 20%;
@@ -93,13 +144,12 @@ main {
 .block-cards_container {
   display: flex;
   justify-content: space-between;
-
   position: relative;
 }
 /*-----------------------------------------
             CARD INFO
  ------------------------------------------*/
-.card-info {
+.first-info {
   height: 450px;
   width: 60%;
   position: relative;
@@ -113,7 +163,6 @@ main {
  -----------------------------------------*/
 .card-Weather {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -126,10 +175,12 @@ main {
   padding: 10px;
 }
 .location .city {
-  font-size: 80%;
+  font-size: 140%;
   font-weight: bold;
   text-align: center;
   margin: 20px auto;
+  font-family: "Noto Sans HK", sans-serif;
+  font-weight: bold;
 }
 .location .date {
   text-align: center;

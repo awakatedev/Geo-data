@@ -6,6 +6,11 @@
     <title>Location-weather app</title>
 
     <!--LINKS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,300;1,700&family=Noto+Sans+HK:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="vendor/normalize.css" />
     <link rel="stylesheet" href="vendor/fontawesome/fontawesome.css" />
@@ -13,7 +18,8 @@
 
   <body>
     <header>
-      <div class="title">
+      <div class="title-container">
+        <i class="fas fa-globe"></i>
         <h1>Location-weather app</h1>
       </div>
 
@@ -32,17 +38,33 @@
       </div>
 
       <div class="dark-mode-container">
-        <button class="dark-mode_icon"></button>
+        <button class="dark-mode_icon">
+          <i class="fas fa-moon" id="moon"></i>
+          <i class="fas fa-sun" id="sun"></i>
+        </button>
       </div>
     </header>
 
     <main>
+      <section class="search">
+        <div class="search-information">
+          <img src="undraw_Location_search_re_ttoj.svg" alt="" />
+          <p>
+            Here you will can find many information about the wheater to the a
+            lot cityes arround the world and more!
+          </p>
+        </div>
+      </section>
       <section class="block-cards">
         <div class="block-cards_container">
           <!--CARD INFO-->
-          <section class="card-info">
-            <div></div>
-          </section>
+          <div class="first-info">
+            <div class="flag"></div>
+            <div class="name"></div>
+            <div class="lenguage"></div>
+            <div class="borders"></div>
+          </div>
+
           <!--CARD WEATHER-->
           <section class="card-Weather">
             <div class="location">
@@ -55,7 +77,6 @@
               <div class="weather"></div>
               <div class="hi-low"></div>
             </div>
-            <!---->
           </section>
         </div>
       </section>
