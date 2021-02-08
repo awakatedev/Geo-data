@@ -56,7 +56,7 @@ main {
 }
 .search_container input {
   border-radius: 20px;
-  border: none;
+  border: solid gray 0.1px;
   height: 40px;
   width: 100%;
   padding-left: 10px;
@@ -96,10 +96,16 @@ main {
   font-size: 25px;
   color: var(--background-blue_dark);
 }
+#moon:hover {
+  font-size: 30px;
+}
 #sun {
   font-size: 30px;
   color: yellow;
   display: none;
+}
+#sun:hover {
+  font-size: 35px;
 }
 /*-----------------------------------------*/
 .search {
@@ -108,7 +114,7 @@ main {
   left: 15%;
   right: 15%;
   top: 15%;
-  display: block;
+  display: none;
 }
 .search-information {
   position: relative;
@@ -134,7 +140,7 @@ main {
           BLOCK CARDS
  ------------------------------------------*/
 .block-cards {
-  display: none;
+  display: block;
   position: absolute;
   right: 10%;
   top: 20%;
@@ -186,6 +192,19 @@ main {
   text-align: center;
   margin-bottom: 20px;
 }
+/*--------------------------------------*/
+.section-button_contact {
+  position: fixed;
+  right: 4%;
+  top: 85%;
+}
+.section-button_contact button {
+  height: 50px;
+  width: 50px;
+  background-color: var(--background-white_ligth);
+  border-radius: 30px;
+  border: none;
+}
 /*---------------------------------------
                 FOOTER
  ----------------------------------------*/
@@ -193,4 +212,42 @@ footer {
   background-color: #030d1a;
   height: 300px;
   width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.APIs-used {
+  width: 40%;
+  padding-top: 20px;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+}
+.APIs-used_container {
+  color: var(--background-white_ligth);
+}
+.APIs-used_container ul {
+  list-style: none;
+  padding-top: 10px;
+}
+.APIs-used_container ul li a {
+  color: var(--background-white_ligth);
+}
+.repo-button {
+  padding-top: 10%;
+  padding-right: 45%;
+}
+.repo-button_container button {
+  background-color: transparent;
+  color: yellow;
+  border: solid yellow 2px;
+  border-bottom-width: 6px;
+  border-right-width: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  height: 70px;
+  width: 150px;
+}
+.repo-button_container button:hover {
+  width: 160px;
+  height: 75px;
 }

@@ -6,19 +6,26 @@ const api = {
 const searchBox = document.querySelector(".search-box");
 searchBox.addEventListener("keypress", setQuery);
 
+//let searchValue = searchBox.value;
+
 function setQuery(evt) {
   if (evt.keyCode == 13) {
     getResults(searchBox.value);
-  //  getResults_rest(searchBox.value);
+    // getResults_rest(searchValue);
   }
 }
+
+//export default getResults_rest;
 
 function getResults(query) {
   fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
     .then((weather) => {
       return weather.json();
     })
-    .then(displayResults);
+    .then(displayResults)
+    .catch(() => {
+      console.log("error 404");
+    });
 }
 
 function displayResults(weather) {

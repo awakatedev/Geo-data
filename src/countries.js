@@ -1,25 +1,23 @@
-let api_country = {
-  base:"https://restcountries.eu/rest/v2/name/",
-}
+import { getResults_rest } from "./main.js";
 
-function getResults_rest(query){
-  fetch(`${api_country.base}${query}`)
-    .then((rest) => {
-      return rest.json();
+function getResults_rest(query) {
+  fetch("https://restcountries.eu/rest/v2/neme/"`${query}`)
+    .then((response) => {
+      return response.json();
     })
-    .then(displayResults_info);
+    .then(data);
 }
 
-function displayResults_info(rest) {
+function data(response) {
   let flag = document.querySelector(".first-info .flag");
-  flag.innerText = `${.flag}`;
+  flag.innerText = `${flag}`;
 
   let name = document.querySelector(".first-info .flag");
-  name.innerText = `${.name}, ${.alpha3Code}`;
+  name.innerText = `${name}, ${alpha3Code}`;
 
   let lenguage = document.querySelector(".first-info .lenguage");
-  lenguage.innerText = `${.lenguages.name}`;
+  lenguage.innerText = `${lenguages.name}`;
 
   let borders = document.querySelector(".firt-information .borders");
-  borders.innerText = `${.borders}`;
+  borders.innerText = `${borders}`;
 }
