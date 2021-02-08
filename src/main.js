@@ -1,3 +1,4 @@
+import getResults_rest from "./countries.js";
 const api = {
   key: "553df87b08ae6c796e00b5b44924fbf5",
   base: "https://api.openweathermap.org/data/2.5/",
@@ -11,7 +12,7 @@ searchBox.addEventListener("keypress", setQuery);
 function setQuery(evt) {
   if (evt.keyCode == 13) {
     getResults(searchBox.value);
-    // getResults_rest(searchValue);
+    getResults_rest(searchBox.value);
   }
 }
 

@@ -1,7 +1,8 @@
-import { getResults_rest } from "./main.js";
+// import { getResults_rest } from "./main.js";
 
 function getResults_rest(query) {
-  fetch("https://restcountries.eu/rest/v2/neme/"`${query}`)
+  debugger;
+  fetch(`https://restcountries.eu/rest/v2/name/${query}`)
     .then((response) => {
       return response.json();
     })
@@ -21,3 +22,5 @@ function data(response) {
   let borders = document.querySelector(".firt-information .borders");
   borders.innerText = `${borders}`;
 }
+
+export default getResults_rest;
