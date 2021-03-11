@@ -1,26 +1,24 @@
-// import { getResults_rest } from "./main.js";
+const country_api = "https://restcountries.eu/rest/v2/name/";
 
 function getResults_rest(query) {
-  debugger;
-  fetch(`https://restcountries.eu/rest/v2/name/${query}`)
-    .then((response) => {
-      return response.json();
-    })
-    .then(data);
+  fetch(`${country_api}${query}`)
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data);
+      //});
+      //}
+      //function data(response) {
+      // let flag = document.querySelector(".flag");
+      // flag.textContent = flag.name;
+      data.forEach((info) => {
+        const flag = document.createElement("img");
+        flag.src = info.flag;
+        document.querySelector(".flag").appendChild(flag);
+
+        const name = document.createElement("h2");
+        name.textContent = info.name;
+        document.querySelector(".name").appendChild(name);
+      });
+    });
 }
-
-function data(response) {
-  let flag = document.querySelector(".first-info .flag");
-  flag.innerText = `${flag}`;
-
-  let name = document.querySelector(".first-info .flag");
-  name.innerText = `${name}, ${alpha3Code}`;
-
-  let lenguage = document.querySelector(".first-info .lenguage");
-  lenguage.innerText = `${lenguages.name}`;
-
-  let borders = document.querySelector(".firt-information .borders");
-  borders.innerText = `${borders}`;
-}
-
 export default getResults_rest;

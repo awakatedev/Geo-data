@@ -1,13 +1,11 @@
 import getResults_rest from "./countries.js";
-const api = {
+const weather_api = {
   key: "553df87b08ae6c796e00b5b44924fbf5",
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
 const searchBox = document.querySelector(".search-box");
 searchBox.addEventListener("keypress", setQuery);
-
-//let searchValue = searchBox.value;
 
 function setQuery(evt) {
   if (evt.keyCode == 13) {
@@ -16,10 +14,12 @@ function setQuery(evt) {
   }
 }
 
-//export default getResults_rest;
+export default getResults_rest;
 
 function getResults(query) {
-  fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+  fetch(
+    `${weather_api.base}weather?q=${query}&units=metric&APPID=${weather_api.key}`
+  )
     .then((weather) => {
       return weather.json();
     })
