@@ -109,18 +109,19 @@ main {
 }
 /*-----------------------------------------*/
 .search {
+  display: block;
   position: relative;
   width: 70%;
   left: 15%;
   right: 15%;
   top: 15%;
-  display: none;
+  display: block;
 }
 .search-information {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-arround;
 }
 .search-information img {
   max-height: 390px;
@@ -130,24 +131,25 @@ main {
 }
 .search-information p {
   font-family: "Noto Sans HK", sans-serif;
-  font-size: 180%;
+  font-size: 130%;
   padding: 10px;
   background-color: var(--background-white_ligth);
   border-radius: 10px;
   height: 150px;
+  width: 400px;
 }
 /*-----------------------------------------
           BLOCK CARDS
  ------------------------------------------*/
 .block-cards {
-  display: block;
+  display: none;
   position: absolute;
   right: 10%;
   top: 20%;
   width: 80%;
   height: 450px;
 }
-.block-cards_container {
+.block-cards_soon {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -155,7 +157,7 @@ main {
 /*-----------------------------------------
             CARD INFO
  ------------------------------------------*/
-.first-info {
+.card_country {
   height: 450px;
   width: 60%;
   position: relative;
@@ -163,6 +165,20 @@ main {
   border-radius: 10px;
   border: none;
   padding: 10px;
+  box-shadow: 2px 7px 4px 4px rgba(89, 73, 30, 0.3);
+  font-family: "Mulish", sans-serif;
+}
+.container_second-info {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 20px;
+}
+.second-info_data2 {
+  margin-right: 5%;
+}
+.second-info_data1 {
+  margin-left: 5%;
 }
 /*----------------------------------------
            CARD WEATHER
@@ -179,6 +195,7 @@ main {
   max-width: 30%;
   min-width: 30%;
   padding: 10px;
+  box-shadow: 2px 7px 4px 4px rgba(89, 73, 30, 0.3);
 }
 .location .city {
   font-size: 140%;
