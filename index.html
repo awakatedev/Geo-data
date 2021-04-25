@@ -8,9 +8,9 @@
     <!--LINKS-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,300;1,700&family=Noto+Sans+HK:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    href=“https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap”
+    rel=“stylesheet”>
+
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="vendor/normalize.css" />
     <link rel="stylesheet" href="vendor/fontawesome/fontawesome.css" />
@@ -20,27 +20,31 @@
     <header>
       <div class="title-container">
         <i class="fas fa-globe"></i>
-        <h1>Location-weather app</h1>
+        <h1>Location</h1>
       </div>
-
-      <div class="search_container">
-        <input
-          type="text"
-          class="search-box"
-          autocomplete="off"
-          placeholder="Place name..."
-          name="browser"
-          value=""
-        />
-        <button>
-          <i class="fas fa-search" id="icon-search"></i>
+      <section class="search-block">
+        <div class="search-block_container">
+          <input
+            type="text"
+            class="search-box"
+            autocomplete="off"
+            placeholder="Place name..."
+            name="browser"
+            value=""
+          />
+          <button>
+            <i class="fas fa-search" id="icon-search"></i>
+          </button>
+        </div>
+      </section>
+      <div class="container_options">
+        <button id="swich">
+          <span><i class="fas fa-sun" id="sun"></i></span>
+          <span><i class="fas fa-moon" id="moon"></i></span>
         </button>
-      </div>
 
-      <div class="dark-mode-container">
-        <button class="dark-mode_icon">
-          <i class="fas fa-moon" id="moon"></i>
-          <i class="fas fa-sun" id="sun"></i>
+        <button class="countries-list-action">
+          <i class="fas fa-list-ul" id="icon-listCoutry"></i>
         </button>
       </div>
     </header>
@@ -48,52 +52,19 @@
     <main>
       <section class="search">
         <div class="search-information">
+          <div class="search-information_text">
+            <p>
+              Here you will can find many information about countries and the
+              weather to arround the world!
+            </p>
+          </div>
           <img src="undraw_Location_search_re_ttoj.svg" alt="" />
-          <p>
-            Here you will can find many information about countries and the weather to arround the world!
-          </p>
         </div>
       </section>
+
+      <!--Countries data container-->
       <section class="block-cards">
-        <section class="block-cards_soon">
-          <!--CARD COUNTRY-->
-          <section class="card_country">
-            <div class="first-info">
-              <div class="flag"></div>
-              <div class="name"></div>
-            </div>
-            <div class="container_second-info">
-              <div class="second-info_data1">
-                <div class="alpha3Code"><h3>Alpha3code:</h3></div>
-                <div class="capital"><h3>Capital:</h3></div>
-                <div class="region"><h3>Region:</h3></div>
-                <div class="subregion"><h3>Sub Region:</h3></div>
-              </div>
-              <div class="second-info_data2">
-                <div class="population"><h3>Population:</h3></div>
-                <div class="timezones"><h3>Time Zones:</h3></div>
-                <div class="currencies"><h3>Currencies:</h3></div>
-                <div class="language"><h3>Language:</h3></div>
-                <div class="borders"><h3>borders:</h3></div>
-              </div>
-            </div>
-            </div>
-          </section>
-
-          <!--CARD WEATHER-->
-          <section class="card-Weather">
-            <div class="location">
-              <div class="city"></div>
-              <div class="date"></div>
-            </div>
-
-            <div class="current">
-              <div class="temp"></div>
-              <div class="weather"></div>
-              <div class="hi-low"></div>
-            </div>
-          </section>
-        </section>
+        <section class="block-cards_soon"></section>
       </section>
 
       <section class="section-button_contact">
@@ -126,6 +97,7 @@
     </footer>
 
     <script type="module" src="src/main.js" charset="utf-8"></script>
-    <script src="src/styles.js"></script>
+    <!--script src="src/countries-list.js" charset="utf-8"></script-->
+    <script src="src/styles.js" charset="utf-8"></script>
   </body>
 </html>

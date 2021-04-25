@@ -1,89 +1,91 @@
 const country_api = "https://restcountries.eu/rest/v2/";
 
-//  let county_elements = [
-//  let flag = ,
-//  let alpha3Code = ,
-//  let capital = ,
-//  let region = ,
-//  let subregion = ,
-//  let population = ,
-//  let timezones = ,
-//  let currencies = ,
-//  let language = ,
-//  let borders = ,
-//]
-
-
 let info_container = document.querySelector(".block-cards");
-//function refresh_container => {
 let init_img = document.querySelector(".search");
-//  if(){
+let height_start = document.querySelector("main");
 
-  //}
-//}
-
-
-
-function getResults_rest(query) {
+function getResults_country(query) {
   fetch(`${country_api}name/${query}`)
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
       //});
-      data.forEach((info) => {
+      data.forEach((country) => {
+        let $card_country = document.createElement("section");
+        document.querySelector(".block-cards_soon").appendChild($card_country);
+        $card_country.className = "card_country";
 
-        const flag = document.createElement("img");
-        flag.src = info.flag;
-        document.querySelector(".flag").appendChild(flag);
-        flag.setAttribute("height", "200px");
-        flag.setAttribute("width", "400px");
+        let $container_flagname = document.createElement("div");
+        $card_country.appendChild($container_flagname);
+        $container_flagname.className = "container_flagname";
 
-        const name = document.createElement("h2");
-        name.textContent = info.name;
-        document.querySelector(".name").appendChild(name);
-        name.setAttribute("margin-top", "50%");
+        let flag = document.createElement("img");
+        flag.src = country.flag;
+        $container_flagname.appendChild(flag);
+        flag.className = "c_flag";
 
-        const alpha3Code = document.createElement("p");
-        alpha3Code.textContent = info.alpha3Code;
-        document.querySelector(".alpha3Code").appendChild(alpha3Code);
+        let name = document.createElement("h2");
+        name.textContent = country.name;
+        $container_flagname.appendChild(name);
+        name.className = "c_name";
+        //-------------------------------------------------------------
+        //container info
+        let $container_info = document.createElement("section");
+        $card_country.appendChild($container_info);
+        $container_info.className = "container_info";
 
-        const capital = document.createElement("p");
-        capital.textContent = info.capital;
-        document.querySelector(".capital").appendChild(capital);
+        let $info_one = document.createElement("div");
+        $container_info.appendChild($info_one);
+        $info_one.className = "info_one";
 
-        const region = document.createElement("p");
-        region.textContent = info.region;
-        document.querySelector(".region").appendChild(region);
+        let $info_two = document.createElement("div");
+        $container_info.appendChild($info_two);
+        $info_two.className = "info_two";
+        //-------------------------------------------------------------
+        //information
+        let alpha3Code = document.createElement("p");
+        alpha3Code.textContent = country.alpha3Code;
+        $info_one.appendChild(alpha3Code);
 
-        const subregion = document.createElement("p");
-        subregion.textContent = info.subregion;
-        document.querySelector(".subregion").appendChild(subregion);
+        let capital = document.createElement("p");
+        capital.textContent = country.capital;
+        $info_one.appendChild(capital);
 
-        const population = document.createElement("p");
-        population.textContent = info.population;
-        document.querySelector(".population").appendChild(population);
+        let region = document.createElement("p");
+        region.textContent = country.region;
+        $info_one.appendChild(region);
 
-        const timezones = document.createElement("p");
-        timezones.textContent = info.timezones;
-        document.querySelector(".timezones").appendChild(timezones);
+        let subregion = document.createElement("p");
+        subregion.textContent = country.subregion;
+        $info_one.appendChild(subregion);
 
-        const currencies = document.createElement("p");
-        currencies.textContent = info.currencies;
-        document.querySelector(".currencies").appendChild(currencies);
+        let population = document.createElement("p");
+        population.textContent = country.population;
+        $info_one.appendChild(population);
 
-        const language = document.createElement("p");
-        language.textContent = info.language;
-        document.querySelector(".language").appendChild(language);
+        //--------------------------------------------------------------
+        let timezones = document.createElement("p");
+        timezones.textContent = country.timezones;
+        $info_two.appendChild(timezones);
 
-        const borders = document.createElement("p");
-        borders.textContent = info.borders;
-        document.querySelector(".borders").appendChild(borders);
+        let currencies = document.createElement("p");
+        currencies.textContent = country.currencies[0].code;
+        $info_two.appendChild(currencies);
+
+        let language = document.createElement("p");
+        language.textContent = country.language;
+        $info_two.appendChild(language);
+
+        let borders = document.createElement("p");
+        borders.textContent = country.borders;
+        $info_two.appendChild(borders);
       });
     });
-    if (true) {
-      info_container.style.display = "block";
-      init_img.style.display = "none";
-    }
+  if (true) {
+    info_container.style.display = "block";
+    init_img.style.display = "none";
+    height_start.style.height = "100%";
+  }
 }
 
-export default getResults_rest;
+export default getResults_country;
