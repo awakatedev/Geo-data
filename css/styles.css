@@ -18,6 +18,9 @@ html {
   font-size: 62.5%;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   background-color: var(--green-smile);
   transition: 0.5s ease all;
 }
@@ -185,6 +188,11 @@ body.dark .title-container {
 #icon-listCoutry {
   font-size: 5rem;
   color: var(--background-blue_dark);
+  transition: 0.5s ease all;
+}
+body.dark #icon-listCoutry {
+  color: var(--background-white_ligth);
+  transition: 0.5s ease all;
 }
 
 /*-----------------------------------------*/
@@ -201,7 +209,7 @@ main {
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: 150px;
+  margin-top: 350px;
 }
 .search-information {
   width: 80%;
@@ -269,10 +277,12 @@ flex-direction:column;
   box-shadow: 2px 7px 4px 4px rgba(89, 73, 30, 0.3);
   font-family: "Mulish", sans-serif;
   margin-bottom: 100px;
+  transition: 0.5s ease all;
 }
 body.dark .card_country {
   background-color: #4c7a8240;
   box-shadow: none;
+  transition: 0.5s ease all;
 }
 .container_flagname {
   width: 100%;
@@ -343,11 +353,12 @@ body.dark .card_country {
                 FOOTER
  ----------------------------------------*/
 footer {
-  height: 300px;
+  height: 350px;
   width: 100%;
   min-width: 320px;
   display: flex;
   padding: 20px;
+  margin-top: 50%;
   background-color: #030d1a;
 }
 .APIs-used {
