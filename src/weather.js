@@ -7,16 +7,13 @@ function getResults_weather(query) {
   fetch(
     `${weather_api.base}weather?q=${query}&units=metric&APPID=${weather_api.key}`
   )
-    .then((weather) => {
-      return weather.json();
-    })
-    .then(displayResults)
-    .catch(() => {
-      console.log("error 404");
-    });
+    .then((weather) =>  weather.json()) 
+    .then(displayResults);
 }
 
 function displayResults(weather) {
+  let $card_country = document.querySelector(".card_country");
+  $card_country.
   let city = document.querySelector(".location .city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -68,4 +65,4 @@ function dateBuilder(d) {
 
   return `${day} ${date} ${month} ${year}`;
 }
-export default getResults_weather(query);
+export default getResults_weather;

@@ -38,7 +38,6 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-width: 320px;
   height: 130px;
   padding: 20px 20px;
   z-index: 50;
@@ -85,31 +84,30 @@ body.dark .title-container {
   position: relative;
   display: flex;
   align-items: center;
-  width: 288px;
-  height: 70px;
+  width: 300px;
+  height: 85px;
 }
 .search-block_container input {
-  border-radius: 70px;
+  border-radius: 100px;
   border: solid gray 0.1px;
-  width: 90%;
-  min-width: 288px;
-  max-width: 300px;
+  width: 100%;
   height: 100%;
-  padding-left: 15px;
+  padding-left: 20px;
   outline: 0;
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 500;
+  line-height: 2.8rem;
   color: #757575;
 }
 .search-block_container button {
   position: absolute;
   background-color: transparent;
   border: none;
-  height: 100%;
+  height: 60px;
   width: 60px;
   outline: 0;
-  right: -5px;
-  top: 15px;
+  right: 5px;
+  top: calc(50% - 15px);
 }
 #icon-search {
   color: var(--black);
@@ -127,6 +125,7 @@ body.dark .title-container {
   align-items: center;
   height: 70px;
   width: 100px;
+  margin-left: 200px;
 }
 #swich {
   background-color: var(--background-blue_dark);
@@ -177,6 +176,29 @@ body.dark .title-container {
 #sun {
   color: #6c63ff;
 }
+.optionsCountries {
+  height: 60px;
+  width: 90px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 5rem;
+  color: var(--background-blue_dark);
+  transition: 0.5s ease all;
+  display: none;
+}
+
+body.dark .optionsCountries {
+  color: var(--background-white_ligth);
+  transition: 0.5s ease all;
+}
+.optionsCountries span {
+  display: flex;
+}
+.optionsCountries span i {
+  margin-left: 10px;
+}
 
 .countries-list-action {
   height: 60px;
@@ -184,15 +206,11 @@ body.dark .title-container {
   background-color: transparent;
   border: none;
   outline: 0;
+  display: none;
 }
 #icon-listCoutry {
   font-size: 5rem;
   color: var(--background-blue_dark);
-  transition: 0.5s ease all;
-}
-body.dark #icon-listCoutry {
-  color: var(--background-white_ligth);
-  transition: 0.5s ease all;
 }
 
 /*-----------------------------------------*/
@@ -200,8 +218,8 @@ main {
   height: 100vh;
   width: 100%;
   min-width: 320px;
-  padding: 10px;
-  padding-top: 15%;
+  padding: 5%;
+  padding-top: 25%;
 }
 
 .search {
@@ -209,7 +227,7 @@ main {
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: 350px;
+  margin-top: 20%;
 }
 .search-information {
   width: 80%;
@@ -254,26 +272,28 @@ flex-direction:column;
  ------------------------------------------*/
 .block-cards {
   display: none;
-  margin: 50px auto;
-  width: 80%;
-  height: 80%;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
 }
 .block-cards_soon {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 /*-----------------------------------------
             CARD INFO
  ------------------------------------------*/
 .card_country {
-  height: 450px;
+  height: 1050px;
   width: 100%;
   position: relative;
   background-color: var(--background-white_ligth);
   border-radius: 10px;
   border: none;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 2px 7px 4px 4px rgba(89, 73, 30, 0.3);
   font-family: "Mulish", sans-serif;
   margin-bottom: 100px;
@@ -288,13 +308,20 @@ body.dark .card_country {
   width: 100%;
 }
 .c_flag {
-  width: 100%;
-  height: 200px;
+  width: 600px;
+  height: 300px;
+  margin-top: 5%;
 }
 .c_name {
-  margin-top: 10px;
-
-  text-align: center;
+  margin: 2% 5%;
+  text-align: initial;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 5.5rem;
+}
+body.dark .c_name {
+  color: var(--background-white_ligth);
+  transition: 0.5s ease all;
 }
 /*----------------------------------------*/
 .container_info {
@@ -304,9 +331,37 @@ body.dark .card_country {
 }
 .info_one {
   width: 40%;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.5rem;
 }
+.info_one h3 {
+  margin-bottom: 5px;
+}
+.info_one p {
+  margin-bottom: 20px;
+}
+body.dark .info_one {
+  color: var(--background-white_ligth);
+  transition: 0.5s ease all;
+}
+
 .info_two {
   width: 40%;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+}
+.info_two h3 {
+  margin-bottom: 5px;
+}
+.info_two p {
+  margin-bottom: 20px;
+}
+
+body.dark .info_two {
+  color: var(--background-white_ligth);
+  transition: 0.5s ease all;
 }
 
 /*----------------------------------------
@@ -321,6 +376,7 @@ body.dark .card_country {
   border: none;
   background-color: var(--background-white_ligth);
   height: 450px;
+  width: 100%;
   padding: 10px;
   box-shadow: 2px 7px 4px 4px rgba(89, 73, 30, 0.3);
 }
@@ -339,52 +395,62 @@ body.dark .card_country {
 /*--------------------------------------*/
 .section-button_contact {
   position: fixed;
-  right: 40px;
-  top: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  background-color: #141414;
+  right: 0px;
+  top: 92.5%;
 }
 .section-button_contact button {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   background-color: var(--background-white_ligth);
-  border-radius: 80px;
+  border-radius: 100px;
   border: none;
 }
 /*---------------------------------------
                 FOOTER
  ----------------------------------------*/
 footer {
-  height: 350px;
+  height: 380px;
   width: 100%;
   min-width: 320px;
   display: flex;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 30px 60px;
   margin-top: 50%;
   background-color: #030d1a;
 }
 .APIs-used {
-  display: flex;
+  margin-top: 105px;
+  font-size: 3rem;
+  font-weight: 500;
 }
 .APIs-used_container {
   color: var(--background-white_ligth);
 }
 .APIs-used_container ul {
   list-style: none;
-  padding-top: 10px;
 }
 .APIs-used_container ul li a {
   color: var(--background-white_ligth);
+  padding-top: 10px;
 }
 .repo-button {
-  padding-top: 10%;
+  margin-top: 140px;
 }
 .repo-button_container button {
-  background-color: transparent;
-  color: yellow;
-  border: solid yellow 2px;
-  border-bottom-width: 6px;
-  border-right-width: 5px;
-  border-radius: 5px;
+  background-color: #4c7a8240;
+  color: var(--background-white_ligth);
+  border: none;
+  border-radius: 10px;
   padding: 15px;
-  height: 70px;
-  width: 150px;
+  height: 100px;
+  width: 230px;
+  font-size: 3rem;
+  font-weight: 500;
 }

@@ -44,40 +44,67 @@ function getResults_country(query) {
         //-------------------------------------------------------------
         //information
         let alpha3Code = document.createElement("p");
+        let subTitle1 = document.createElement("h3");
+        subTitle1.textContent = "Alpha3Code:";
         alpha3Code.textContent = country.alpha3Code;
+        $info_one.appendChild(subTitle1);
         $info_one.appendChild(alpha3Code);
 
         let capital = document.createElement("p");
+        let subTitle2 = document.createElement("h3");
+        subTitle2.textContent = "Capital:";
         capital.textContent = country.capital;
+        $info_one.appendChild(subTitle2);
         $info_one.appendChild(capital);
 
         let region = document.createElement("p");
+        let subTitle3 = document.createElement("h3");
+        subTitle3.textContent = "Region:";
         region.textContent = country.region;
+        $info_one.appendChild(subTitle3);
         $info_one.appendChild(region);
 
         let subregion = document.createElement("p");
+        let subTitle4 = document.createElement("h3");
+        subTitle4.textContent = "Sub Region:";
         subregion.textContent = country.subregion;
+        $info_one.appendChild(subTitle4);
         $info_one.appendChild(subregion);
 
         let population = document.createElement("p");
+        let subTitle5 = document.createElement("h3");
+        subTitle5.textContent = "Population:";
         population.textContent = country.population;
+        $info_one.appendChild(subTitle5);
         $info_one.appendChild(population);
 
         //--------------------------------------------------------------
         let timezones = document.createElement("p");
+        let subTitle6 = document.createElement("h3");
+        subTitle6.textContent = "Time zones:";
         timezones.textContent = country.timezones;
+        $info_two.appendChild(subTitle6);
         $info_two.appendChild(timezones);
 
         let currencies = document.createElement("p");
+        let subTitle7 = document.createElement("h3");
+        subTitle7.textContent = "Currencies:";
         currencies.textContent = country.currencies[0].code;
+        $info_two.appendChild(subTitle7);
         $info_two.appendChild(currencies);
 
         let language = document.createElement("p");
-        language.textContent = country.language;
+        let subTitle8 = document.createElement("h3");
+        subTitle8.textContent = "Language:";
+        language.textContent = country.languages[0].name;
+        $info_two.appendChild(subTitle8);
         $info_two.appendChild(language);
 
         let borders = document.createElement("p");
+        let subTitle9 = document.createElement("h3");
+        subTitle9.textContent = "Borders:";
         borders.textContent = country.borders;
+        $info_two.appendChild(subTitle9);
         $info_two.appendChild(borders);
       });
     });
