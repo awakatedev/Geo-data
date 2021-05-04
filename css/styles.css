@@ -54,7 +54,7 @@ body.dark header {
   display: flex;
   align-items: center;
   width: auto;
-  margin-left: 20px;
+  margin-left: 5%;
   color: var(--background-blue_dark);
   transition: 0.5s ease all;
 }
@@ -219,7 +219,7 @@ main {
   width: 100%;
   min-width: 320px;
   padding: 5%;
-  padding-top: 25%;
+  padding-top: 40%;
 }
 
 .search {
@@ -242,11 +242,13 @@ main {
   margin: 0 auto;
   padding: 20px;
   border-left: solid #6c63ff 20px;
-  font-size: 5.6rem;
-  line-height: 5.8rem;
-  font-weight: bold;
   color: var(--background-blue_dark);
   transition: 0.5s ease all;
+}
+.search-information_text h2 {
+  font-size: 5.5rem;
+  line-height: 6rem;
+  font-weight: bold;
 }
 body.dark .search-information_text {
   color: var(--background-white_ligth);
@@ -287,7 +289,7 @@ flex-direction:column;
             CARD INFO
  ------------------------------------------*/
 .card_country {
-  height: 1050px;
+  height: 1200px;
   width: 100%;
   position: relative;
   background-color: var(--background-white_ligth);
@@ -296,26 +298,44 @@ flex-direction:column;
   padding: 20px;
   box-shadow: 2px 7px 4px 4px rgba(89, 73, 30, 0.3);
   font-family: "Mulish", sans-serif;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+
   transition: 0.5s ease all;
+  animation-name: animatetop;
+  animation-duration: 1s;
+}
+@keyframes animatetop {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 body.dark .card_country {
   background-color: #4c7a8240;
   box-shadow: none;
   transition: 0.5s ease all;
 }
+.firstContainer {
+  display: flex;
+  margin: 5%;
+}
 .container_flagname {
-  width: 100%;
+  width: 50%;
+  height: auto;
 }
 .c_flag {
-  width: 600px;
+  width: 100%;
   height: 300px;
-  margin-top: 5%;
+  padding: 0;
 }
 .c_name {
-  margin: 2% 5%;
+  margin: 2% 0;
   text-align: initial;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: bold;
   line-height: 5.5rem;
 }
@@ -323,44 +343,70 @@ body.dark .c_name {
   color: var(--background-white_ligth);
   transition: 0.5s ease all;
 }
+.searchContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: auto;
+  padding: 5% 0 0 5%;
+}
+.searchContainer input {
+  width: 100%;
+  height: 87px;
+  border: none;
+  overflow: 0;
+  border-radius: 100px;
+}
+.iconSearchCard {
+  position: absolute;
+  top: 130px;
+  right: 85px;
+  font-size: 3rem;
+}
+
 /*----------------------------------------*/
 .container_info {
   display: flex;
   justify-content: space-between;
   margin: 5%;
+  overflow: hidden;
 }
 .info_one {
-  width: 40%;
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 3.5rem;
+  width: 50%;
 }
 .info_one h3 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: bold;
 }
 .info_one p {
   margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-weight: 500;
 }
 body.dark .info_one {
-  color: var(--background-white_ligth);
+  color: #e2e2e2;
   transition: 0.5s ease all;
 }
 
 .info_two {
-  width: 40%;
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 3.5rem;
+  width: 50%;
+  padding-left: 5%;
 }
 .info_two h3 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: bold;
 }
 .info_two p {
   margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-weight: 500;
 }
 
 body.dark .info_two {
-  color: var(--background-white_ligth);
+  color: #e2e2e2;
   transition: 0.5s ease all;
 }
 
@@ -411,6 +457,18 @@ body.dark .info_two {
   background-color: var(--background-white_ligth);
   border-radius: 100px;
   border: none;
+}
+.section-button_contact button i {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(108, 99, 255, 1) 2.1%,
+    rgba(227, 137, 240, 1) 40.7%,
+    rgba(239, 119, 92, 1) 79.7%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-size: 7.5rem;
 }
 /*---------------------------------------
                 FOOTER

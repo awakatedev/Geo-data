@@ -15,8 +15,12 @@ function getResults_country(query) {
         document.querySelector(".block-cards_soon").appendChild($card_country);
         $card_country.className = "card_country";
 
+        let $firstCountainer = document.createElement("section");
+        $card_country.appendChild($firstCountainer);
+        $firstCountainer.className = "firstContainer";
+
         let $container_flagname = document.createElement("div");
-        $card_country.appendChild($container_flagname);
+        $firstCountainer.appendChild($container_flagname);
         $container_flagname.className = "container_flagname";
 
         let flag = document.createElement("img");
@@ -28,6 +32,18 @@ function getResults_country(query) {
         name.textContent = country.name;
         $container_flagname.appendChild(name);
         name.className = "c_name";
+
+        let $searchContainer = document.createElement("div");
+        $firstCountainer.appendChild($searchContainer);
+        $searchContainer.className = "searchContainer";
+
+        let searcherInput = document.createElement("input");
+        $searchContainer.appendChild(searcherInput);
+
+        let iconSearchCard = document.createElement("i");
+        $firstCountainer.appendChild(iconSearchCard);
+        iconSearchCard.className = "fas fa-search iconSearchCard";
+
         //-------------------------------------------------------------
         //container info
         let $container_info = document.createElement("section");

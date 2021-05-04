@@ -22,10 +22,14 @@ function success(getCordinates) {
     .then(dataC);
 }
 function dataC(weather) {
-  let father = document.querySelector(".search-information_text");
-  let here = document.createElement("p");
-  father.appendChild(here);
-  here.textContent = weather.name;
+  let $containerLocation = document.querySelector(".search-information_text");
+  let name = document.createElement("h2");
+  $containerLocation.appendChild(name);
+  name.textContent = weather.name;
+
+  let country = document.createElement("p");
+  $containerLocation.appendChild(country);
+  country.textContent = "Country:" + weather.sys.country;
 }
 const searchBox = document.querySelector(".search-box");
 searchBox.addEventListener("keypress", setQuery);
