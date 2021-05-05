@@ -1,9 +1,10 @@
 import getResults_country from "./countries.js";
 //import getResults_weather from "./weather.js";
-const weather_api = {
-  key: "553df87b08ae6c796e00b5b44924fbf5",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
+let myIp = document.querySelector("#my-location");
+myIp.addEventListener("click", getIP);
+function getIP(json) {
+  fetch(``);
+}
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(success);
@@ -15,21 +16,19 @@ function success(getCordinates) {
   let lon = getCordinates.coords.longitude;
   console.log(lat, lon);
 
-  fetch(
-    `${weather_api.base}weather?lat=${lat}&lon=${lon}&appid=${weather_api.key}`
-  )
-    .then((weather) => weather.json())
+  fetch(`http://ip-api.com/json/181.208.166.47`)
+    .then((location) => location.json())
     .then(dataC);
 }
-function dataC(weather) {
+function dataC(location) {
   let $containerLocation = document.querySelector(".search-information_text");
   let name = document.createElement("h2");
   $containerLocation.appendChild(name);
-  name.textContent = weather.name;
+  name.textContent = location.city;
 
   let country = document.createElement("p");
   $containerLocation.appendChild(country);
-  country.textContent = "Country:" + weather.sys.country;
+  country.textContent = "Country:" + country;
 }
 const searchBox = document.querySelector(".search-box");
 searchBox.addEventListener("keypress", setQuery);
