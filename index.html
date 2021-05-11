@@ -8,11 +8,16 @@
     <!--LINKS-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-    href=“https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap”
-    rel=“stylesheet”>
+      href="https://fonts.googleapis.com/css2?family=Mandali&family=Mulish:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/styles.css" />
-    <!--link rel="stylesheet" href="vendor/normalize.css" /-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./css/responsive.css"
+      media="(min-width: 500px)"
+    />
     <link rel="stylesheet" href="vendor/fontawesome/fontawesome.css" />
   </head>
 
@@ -28,7 +33,7 @@
             type="text"
             class="search-box"
             autocomplete="off"
-            placeholder="Place name..."
+            placeholder="Country name..."
             name="browser"
             value=""
           />
@@ -42,36 +47,45 @@
             <span><i class="fas fa-sun" id="sun"></i></span>
             <span><i class="fas fa-moon" id="moon"></i></span>
           </button>
-          <button class="optionsCountries">
-            <span><i class="fas fa-list"></i><i class="fas fa-th"></i> </span>
-          </button>
         </div>
-        <section class="optionsCountries__block-options">
-          <div>
-            <button class="countries-list-action">
-              <i class="fas fa-list-ul" id="icon-listCoutry"></i>
-            </button>
-          </div>
-          <div></div>
-        </section>
       </section>
     </header>
 
     <main>
       <section class="search">
         <div class="search-information">
-          <div class="search-information_text"></div>
-          <img src="undraw_Location_search_re_ttoj.svg" alt="" />
+          <section class="search-information_coords">
+            <div class="ipAdress"><h3>IP Adress</h3></div>
+            <div class="lon"><h3>Longitude</h3></div>
+            <div class="lat"><h3>Latitude</h3></div>
+          </section>
+          <section class="search-information_locationData"></section>
+          <section class="search-information_dataOptions">
+            <div class="dataOptions_data">
+              <div class="dataOptions_data-continent"><h3>Continent</h3></div>
+              <div class="dataOptions_data-Country"><h3>Country</h3></div>
+              <div class="dataOptions_data-timezone"><h3>Time Zone</h3></div>
+              <div class="dataOptions_data-region"><h3>Region</h3></div>
+              <div class="dataOptions_data-Currency"><h3>Currency</h3></div>
+            </div>
+            <div class="dataOptions_options">
+              <div class="options">
+                <button id="getLocal-weather"></button>
+                <button id="getCoutry"></button>
+                <button id="getLocamMap"></button>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
-      <!--Countries data container-->
+      <!--Countries data cards-->
       <section class="block-cards">
         <section class="block-cards_soon"></section>
       </section>
 
-      <section class="section-button_contact">
-        <button id="my-location"><i class="fas fa-telescope"></i></button>
+      <section class="section-LocationOptions">
+        <button id="LocationOptions"><i class="fas fa-ul"></i></button>
       </section>
     </main>
 

@@ -1,11 +1,10 @@
-const country_api = "https://restcountries.eu/rest/v2/";
+const countryURL = "https://restcountries.eu/rest/v2/";
 
-let info_container = document.querySelector(".block-cards");
-let init_img = document.querySelector(".search");
-let height_start = document.querySelector("main");
+const info_container = document.querySelector(".block-cards");
+const MyLocation = document.querySelector(".search");
 
 function getResults_country(query) {
-  fetch(`${country_api}name/${query}`)
+  fetch(`${countryURL}name/${query}`)
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
@@ -61,7 +60,7 @@ function getResults_country(query) {
         //information
         let alpha3Code = document.createElement("p");
         let subTitle1 = document.createElement("h3");
-        subTitle1.textContent = "Alpha3Code:";
+        subTitle1.textContent = "Country Code:";
         alpha3Code.textContent = country.alpha3Code;
         $info_one.appendChild(subTitle1);
         $info_one.appendChild(alpha3Code);
@@ -126,8 +125,7 @@ function getResults_country(query) {
     });
   if (true) {
     info_container.style.display = "block";
-    init_img.style.display = "none";
-    height_start.style.height = "100%";
+    MyLocation.style.display = "none";
   }
 }
 

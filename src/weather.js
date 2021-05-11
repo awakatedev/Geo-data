@@ -1,3 +1,4 @@
+
 const weather_api = {
   key: "553df87b08ae6c796e00b5b44924fbf5",
   base: "https://api.openweathermap.org/data/2.5/",
@@ -8,12 +9,8 @@ function getResults_weather(query) {
     `${weather_api.base}weather?q=${query}&units=metric&APPID=${weather_api.key}`
   )
     .then((weather) =>  weather.json()) 
-    .then(displayResults);
-}
-
-function displayResults(weather) {
-  let $card_country = document.querySelector(".card_country");
-  $card_country.
+    .then((data) => {
+     data.forEach((city) => {
   let city = document.querySelector(".location .city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -31,7 +28,7 @@ function displayResults(weather) {
   hilow.innerText = `${Math.round(weather.main.temp_min)}ºc / ${Math.round(
     weather.main.temp_max
   )}ºc`;
-}
+});
 
 function dateBuilder(d) {
   let months = [
