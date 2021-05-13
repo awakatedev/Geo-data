@@ -56,23 +56,28 @@
         <div class="search-information">
           <section class="search-information_coords">
             <div class="ipAdress"><h3>IP Adress</h3></div>
-            <div class="lon"><h3>Longitude</h3></div>
             <div class="lat"><h3>Latitude</h3></div>
+            <div class="lon"><h3>Longitude</h3></div>
           </section>
           <section class="search-information_locationData"></section>
           <section class="search-information_dataOptions">
-            <div class="dataOptions_data">
-              <div class="dataOptions_data-continent"><h3>Continent</h3></div>
+            <section class="dataOptions_data">
               <div class="dataOptions_data-Country"><h3>Country</h3></div>
-              <div class="dataOptions_data-timezone"><h3>Time Zone</h3></div>
               <div class="dataOptions_data-region"><h3>Region</h3></div>
-              <div class="dataOptions_data-Currency"><h3>Currency</h3></div>
-            </div>
+              <div class="dataOptions_data-timezone"><h3>Time Zone</h3></div>
+              <div class="dataOptions_data-callCode">
+                <h3>Country Call Code</h3>
+              </div>
+            </section>
             <div class="dataOptions_options">
               <div class="options">
-                <button id="getLocal-weather"></button>
-                <button id="getCoutry"></button>
-                <button id="getLocamMap"></button>
+                <button id="getLocal-weather">
+                  <i class="fas fa-cloud-sun-rain"></i>
+                </button>
+                <button id="getCoutry"><i class="far fa-flag"></i></button>
+                <button id="getLocamMap">
+                  <i class="fas fa-search-location"></i>
+                </button>
               </div>
             </div>
           </section>
@@ -85,24 +90,14 @@
       </section>
 
       <section class="section-LocationOptions">
-        <button id="LocationOptions"><i class="fas fa-ul"></i></button>
+        <button id="LocationOptions"><i class="fas fa-street-view"></i></button>
       </section>
     </main>
 
     <footer>
       <section class="APIs-used">
         <div class="APIs-used_container">
-          <h2>APIs used:</h2>
-          <ul>
-            <li>
-              <a href="https://openweathermap.org/"
-                >https://openweathermap.org/</a
-              >
-            </li>
-            <li>
-              <a href="https://restcountries.eu/">https://restcountries.eu/</a>
-            </li>
-          </ul>
+          <h2>Get the Data from everywere!</h2>
         </div>
       </section>
 

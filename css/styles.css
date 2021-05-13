@@ -246,8 +246,9 @@ body.dark .search-information_coords {
   margin: 70px auto;
   display: flex;
 }
+
 .dataOptions_data {
-  width: 50%;
+  width: 60%;
   font-size: 4rem;
   line-height: 4.3rem;
 }
@@ -259,12 +260,13 @@ body.dark .search-information_coords {
 }
 
 .dataOptions_options {
-  width: 50%;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
 }
 .options {
-  width: 30%;
-  height: 380px;
-  margin-left: 50%;
+  width: 38%;
+  height: 420px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -274,12 +276,16 @@ body.dark .search-information_coords {
   background-color: var(--background-white_ligth);
 }
 .options button {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   border-radius: 100px;
   background-color: #efefef;
   border: none;
   outline: none;
+}
+.options i {
+  font-size: 5.5rem;
+  color: var(--gray-black);
 }
 
 /*----------------------------------------
@@ -470,23 +476,24 @@ body.dark .info_two {
   top: 90%;
 }
 .section-LocationOptions button {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   background-color: #efefef;
-  border-radius: 100px;
+  border-radius: 1000px;
   border: none;
 }
 .section-LocationOptions button i {
-  background-image: radial-gradient(
+  /*  background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
     rgba(108, 99, 255, 1) 2.1%,
     rgba(227, 137, 240, 1) 40.7%,
     rgba(239, 119, 92, 1) 79.7%
   );
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent;*/
 
-  font-size: 7.5rem;
+  font-size: 6rem;
+  color: var(--gray-black);
 }
 /*---------------------------------------
                 FOOTER
@@ -497,28 +504,21 @@ footer {
   min-width: 320px;
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
+  padding: 5%;
   margin-top: 50%;
   background-color: #030d1a;
 }
 .APIs-used {
-  margin-top: 105px;
+  margin-top: 0px;
   font-size: 3rem;
   font-weight: 500;
 }
 .APIs-used_container {
   color: var(--background-white_ligth);
 }
-.APIs-used_container ul {
-  list-style: none;
-}
-.APIs-used_container ul li a {
-  color: var(--background-white_ligth);
-  padding-top: 10px;
-  text-decoration: none;
-}
+
 .repo-button {
-  margin-top: 140px;
+  margin-top: 280px;
 }
 .repo-button_container button {
   background-color: #4c7a8240;

@@ -4,6 +4,16 @@ const weather_api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
+
+const searchBox = document.querySelector(".weather-browser");
+searchBox.addEventListener("keypress", setQuery);
+
+function setQuery(evt) {
+  if (evt.keyCode == 13) {
+    getResults_weather(searchBox.value);
+  }
+}
+
 function getResults_weather(query) {
   fetch(
     `${weather_api.base}weather?q=${query}&units=metric&APPID=${weather_api.key}`

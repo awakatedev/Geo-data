@@ -1,10 +1,10 @@
-const countryURL = "https://restcountries.eu/rest/v2/";
+const countryAPI_URL = "https://restcountries.eu/rest/v2/name/";
 
 const info_container = document.querySelector(".block-cards");
 const MyLocation = document.querySelector(".search");
 
 function getResults_country(query) {
-  fetch(`${countryURL}name/${query}`)
+  fetch(`${countryAPI_URL}${query}`)
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
