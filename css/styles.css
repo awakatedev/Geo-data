@@ -17,11 +17,6 @@ html {
   font-size: 65.5%;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  height: 100%;
-  width: 100%;
   background-color: var(--background-white_ligth);
   transition: 0.5s ease all;
 }
@@ -125,7 +120,7 @@ body.dark .title-container {
   width: 110px;
   margin-right: 13%;
 }
-#swich {
+#switch {
   background-color: var(--background-blue_dark);
   border-radius: 1000px;
   border: none;
@@ -135,7 +130,7 @@ body.dark .title-container {
   cursor: pointer;
   padding: 10px 20px;
 }
-#swich::after {
+#switch::after {
   content: "";
   display: block;
   height: 80px;
@@ -149,15 +144,15 @@ body.dark .title-container {
   background-color: var(--just-white);
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
-#swich.active {
+#switch.active {
   background-color: var(--just-white);
 }
-#swich.active::after {
+#switch.active::after {
   background-color: var(--background-blue_dark);
   left: unset;
   right: 0;
 }
-#swich span {
+#switch span {
   height: 60px;
   width: 60px;
   line-height: 60px;

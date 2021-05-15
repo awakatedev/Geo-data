@@ -2,11 +2,11 @@
 let title_color = document.querySelector(".title-container");
 let list = document.querySelector("#icon-listCoutry");
 
-let btnSwich = document.querySelector("#swich");
+let btnSwitch = document.querySelector("#switch");
 
-btnSwich.addEventListener("click", () => {
+btnSwitch.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  btnSwich.classList.toggle("active");
+  btnSwitch.classList.toggle("active");
 
   //save dark-mode in LocaleStorage
   if (document.body.classList.contains("dark")) {
@@ -17,8 +17,8 @@ btnSwich.addEventListener("click", () => {
 });
 if (localStorage.getItem("dark-mode") === "true") {
   document.body.classList.add("dark");
-  btnSwich.classList.add("active");
+  btnSwitch.classList.add("active");
 } else {
   document.body.classList.remove("dark");
-  btnSwich.classList.remove("active");
+  btnSwitch.classList.remove("active");
 }
