@@ -1,10 +1,5 @@
 import getResults_country from "./countries.js";
 
-//BASE Geolacation API by IP adress
-const geoIP_URL = {
-  ipBase: "https://geo.ipify.org/api/v1?",
-  ipKey: "apiKey=at_p0ou9RwIQ0k8Wdr34BiYwn3BJ1WbX&",
-};
 //get IP adress
 fetch(`https://api64.ipify.org?format=json`)
   .then((IP) => IP.json())
