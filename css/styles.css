@@ -9,8 +9,10 @@
   --background-white_ligth: #f7f7f7;
   --just-white: #fff;
   --background-blue_dark: #040c18f7;
+  --soft-grey: #efefef;
   --black: #000000;
   --gray-black: #0e0e0e;
+  --mandaliFont: "Mandali", sans-serif;
 }
 html {
   font-family: "Mulish", sans-serif;
@@ -159,23 +161,6 @@ body.dark .title-container {
   transition: 0.7s;
 }
 
-/*#switch span {
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
-  background: none;
-  border: none;
-  border-radius: 60px;
-  outline: 0;
-  font-size: 4rem;
-}
-#moon {
-  color: var(--just-white);
-}
-#sun {
-  color: #6c63ff;
-}*/
-
 /*-----------------------------------------*/
 main {
   height: 100%;
@@ -193,7 +178,7 @@ main {
   width: 95%;
   margin: 0 auto;
   height: 1200px;
-  background-color: #efefef;
+  background-color: var(--soft-grey);
   border-radius: 30px;
   transition: 0.5s ease all;
 }
@@ -208,7 +193,7 @@ body.dark .search {
   width: 100%;
   height: auto;
   padding: 5% 0;
-  font-family: "Mandali", sans-serif;
+  font-family: var(--mandaliFont);
 }
 .search-information_coords {
   width: 85%;
@@ -276,12 +261,17 @@ body.dark .search-information_coords {
   align-items: center;
   border-radius: 1000px;
   background-color: var(--background-white_ligth);
+  transition: 0.5s ease all;
+}
+body.dark .options{
+  background-color: #0e1b2df7;
+  transition: 0.5s ease all;
 }
 .options button {
   height: 120px;
   width: 120px;
   border-radius: 100px;
-  background-color: #efefef;
+  background-color: var(--soft-grey);
   border: none;
   outline: none;
 }
@@ -316,13 +306,13 @@ flex-direction:column;
   margin: 0 auto;
 }
 /*-----------------------------------------
-            CARD INFO
+            CARD INFO COUNTR
  ------------------------------------------*/
 .card_country {
   height: 1200px;
   width: 100%;
   position: relative;
-  background-color: #efefef;
+  background-color: var(--soft-grey);
   border-radius: 30px;
   border: none;
   padding: 20px;
@@ -484,7 +474,7 @@ body.dark .info_two {
   border-radius: 1000px;
   border: none;
 }
-.section-LocationOptions button i {
+.section-LocationOptions #LocationOptions {
   /*  background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
     rgba(108, 99, 255, 1) 2.1%,
@@ -493,10 +483,18 @@ body.dark .info_two {
   );
   -webkit-background-clip: text;
   color: transparent;*/
-
+  display: block;
   font-size: 6rem;
   color: var(--gray-black);
 }
+
+.section-LocationOptions #CountriesCarousel {
+  display: none;
+}
+.section-LocationOptions #CountriesGrid {
+  display: none;
+}
+
 /*---------------------------------------
                 FOOTER
  ----------------------------------------*/

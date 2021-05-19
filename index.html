@@ -50,6 +50,7 @@
     </header>
 
     <main>
+      <!--GeoLocation card-->
       <section class="search">
         <div class="search-information">
           <section class="search-information_coords">
@@ -82,13 +83,19 @@
         </div>
       </section>
 
-      <!--Countries data cards-->
+      <!--Countries cards container-->
       <section class="block-cards">
         <section class="block-cards_soon"></section>
       </section>
 
+      <!--Carousel and countries grid-->
+      <section class="block-options__countries"></section>
+
+      <!--Buttons options-->
       <section class="section-LocationOptions">
         <button id="LocationOptions"><i class="fas fa-street-view"></i></button>
+        <button id="CountriesCarousel"></button>
+        <button id="CountriesGrid"></button>
       </section>
     </main>
 
@@ -107,7 +114,6 @@
     </footer>
 
     <script type="module" src="src/main.js" charset="utf-8"></script>
-    <script src="src/countries-list.js" charset="utf-8"></script>
     <script src="src/styles.js" charset="utf-8"></script>
   </body>
 </html>
