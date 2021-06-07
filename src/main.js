@@ -1,11 +1,12 @@
 import getResults_country from "./countries-browser.js";
-import dataIP from "./geoLocation,js";
+import dataIP from "./geoLocation.js";
 
-let IP = [];
+// let IP = [];
 //getting IP adress to get geoLocation
 fetch(`https://api64.ipify.org?format=json`)
   .then((IP) => IP.json())
-  .then(dataIP);
+  .then((IP) => dataIP(IP));
+  // .then(dataIP);
 
 //Country browser
 const searchBox = document.querySelector(".search-box");
@@ -17,5 +18,5 @@ function setQuery(evt) {
   }
 }
 
-export default getResults_country;
-export default dataIP;
+// export default getResults_country;
+// export default dataIP;
