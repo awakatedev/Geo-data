@@ -9,6 +9,7 @@ function dataIP(MyIP) {
     let $ipAdressContainer = document.querySelector(".ipAdress");
     let ipAdress = document.createElement("p");
     $ipAdressContainer.appendChild(ipAdress);
+    $ipAdressContainer.children[0].textContent = `${location.version} Adress`;
     ipAdress.textContent = location.ip;
 
     let $latContainer = document.querySelector(".lat");
