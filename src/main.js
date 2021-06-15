@@ -1,5 +1,6 @@
 import getResults_country from "./countries-browser.js";
-import dataIP from "./geoLocation.js";
+import { LOCATION, dataIP } from "./geoLocation.js";
+import getLocal_weather from "./weather.js";
 
 //getting IP adress to get geoLocation
 fetch(`https://api64.ipify.org?format=json`)
@@ -15,3 +16,12 @@ function setQuery(evt) {
     getResults_country(searchBox.value);
   }
 }
+
+//Weather
+const btnWeather = document.querySelector("#getLocal-weather");
+btnWeather.addEventListener("click", () => getLocal_weather(LOCATION.city));
+
+// function getLocal_weather_click()
+// {
+//   getLocal_weather(LOCATION.city);
+// }

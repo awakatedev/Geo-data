@@ -1,11 +1,14 @@
+let LOCATION = {};
+
 function dataIP(MyIP) {
-  console.log(MyIP.ip);
+  // console.log(MyIP.ip);
 
   fetch(`https://ipapi.co/${MyIP.ip}/json/`)
     .then((Location) => Location.json())
     .then(dataC);
   function dataC(location) {
-    console.log(location);
+    // console.log(location);
+    LOCATION = location;
     let $ipAdressContainer = document.querySelector(".ipAdress");
     let ipAdress = document.createElement("p");
     $ipAdressContainer.appendChild(ipAdress);
@@ -51,11 +54,11 @@ function dataIP(MyIP) {
     call_code.textContent = location.country_calling_code;
 
     //------------------------------------------------------------
-    let $buttonWeather = document.querySelector("#getLocal-weather");
-    $buttonWeather.addEventListener("click", () => {
-      let cityQuery = location.location.city;
-      console.log(cityQuery);
-    });
+    // let $buttonWeather = document.querySelector("#getLocal-weather");
+    // $buttonWeather.addEventListener("click", () => {
+    //   let cityQuery = location.location.city;
+    //   console.log(cityQuery);
+    // });
   }
 }
-export default dataIP;
+export {LOCATION, dataIP};
