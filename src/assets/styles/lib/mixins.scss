@@ -1,0 +1,27 @@
+/*----------------------------------\
+          @MIXINS
+\---------------------------------*/
+//Media query
+@mixin respond-to($width){
+  @media only screen and (min-width:$width){
+    @content; }
+}
+//General
+@mixin align($align){
+  display: flex;
+  justify-content: $align;
+  align-items: $align;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+
+}
+//**Mixins to: mobile**//
+
+@mixin box-container($width) {
+  width: $width;
+  margin: 0;
+  padding: 5% 5% 5% 5%;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+} 

@@ -1,0 +1,12 @@
+@use '../index.scss';
+
+
+footer{
+  background: index.$Grey-light;
+  height: 10vh;
+  width: 100%;
+  margin-top: 110%;
+}
+ @include index.respond-to(900px) {
+  
+}

@@ -1,0 +1,10 @@
+@use '../index';
+
+.hero{
+  @include index.box-container(100%);
+
+}
+
+@include index.respond-to(900px) {
+  
+}

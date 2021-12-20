@@ -1,0 +1,70 @@
+{
+  "name": "Geo-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack server --open --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "format": "prettier --write '{*.jsx,src/**/*.{js,jsx}}'",
+    "lint": "eslint src/ --fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint && npm run format",
+    "post-commit": "git status",
+    "pre-push": "git status",
+    "preserveUnused": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awakatedev/Weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awakatedev/Weather-app/issues"
+  },
+  "homepage": "https://github.com/awakatedev/Weather-app#readme",
+  "dependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-select": "^5.2.1",
+    "redux": "^4.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.0",
+    "@babel/eslint-plugin": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
+    "@iconify/react": "^3.1.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "simple-git-hooks": "^2.7.0",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
