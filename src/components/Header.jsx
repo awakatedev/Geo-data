@@ -1,23 +1,34 @@
 import "../assets/styles/components/Header.scss";
-import React, { useState, useEffect } from "react";
-import { Icon, InlineIcon } from "@iconify/react";
+import { useState, useEffect } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Icon } from "@iconify/react";
 
 const Header = () => {
-  const [theme, setTheme] = useState(false);
+  // const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState("light");
+  // const [colorTheme, setColorTheme] = useState("light");
 
-  useEffect = () => {
+  useEffect(() => {
+    console.count("Header");
     const currentTheme = localStorage.getItem("Theme");
     if (currentTheme) {
       setTheme(currentTheme);
     }
-  };
+  }, []);
 
-  let themeColor = "light";
-  // document.body.className=(themeColor);
-  const handleClick = (themeColor) => {
-    setTheme(themeColor);
-    localStorage.setItem("Theme", themeColor);
-    document.body.className = themeColor;
+  useEffect(() => {
+    localStorage.setItem("Theme", theme);
+    document.body.className = theme;
+  }, [theme]);
+
+  const handleClick = async () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+    localStorage.setItem("Theme", theme);
+    document.body.className = await theme;
   };
 
   return (
@@ -30,28 +41,24 @@ const Header = () => {
           <div>
             <input
               type="text"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="City name..."
               name="browser"
-              value=""
+              defaultValue=""
             />
           </div>
           <div className="header--themeSwitch">
             <button
-              onClick={() =>
-                handleClick(
-                  themeColor === "light"
-                    ? (themeColor = "dark")
-                    : (themeColor = "light")
-                )
-              }
+              type="button"
+              onClick={() => {
+                handleClick();
+              }}
             >
-              theme
+              Theme
             </button>
           </div>
         </section>
       </header>
-      <button></button>
     </>
   );
 };
